@@ -1,12 +1,12 @@
 #!name=Enhanced_Locket_Gold
-#!desc=Enhanced Locket Gold Script for Locket by HoangThiLong/elfarye
-#!author=elfarye
+#!desc=Enhanced Locket Gold Script for Locket by HoangThiLong
+#!author=HoangThiLong
 #!homepage=https://github.com/HoangThiLong/enhanced_Locket_Gold
 
 [Script]
-revenuecat = type=http-response, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$), script-path=https://raw.githubusercontent.com/HoangThiLong/enhanced_Locket_Gold/main/js/enhanced_Locket_Gold.js, requires-body=true, max-size=-1, timeout=60
+revenuecat = type=http-response, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$), script-path=https://raw.githubusercontent.com/HoangThiLong/enhanced_Locket_Gold/refs/heads/main/js/enhanced_Locket_Gold.js, requires-body=true, max-size=-1, timeout=60
 
-deleteHeader = type=http-request, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts|subscribers), script-path=https://raw.githubusercontent.com/yourusername/yourrepo/main/js/enhanced_deleteHeader.js, timeout=60
+deleteHeader = type=http-request, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts|subscribers), script-path=https://raw.githubusercontent.com/HoangThiLong/enhanced_Locket_Gold/refs/heads/main/js/enhanced_deleteHeader.js, timeout=60
 
 [MITM]
 hostname = %APPEND% api.revenuecat.com
